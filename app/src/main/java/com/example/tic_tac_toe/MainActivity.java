@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 status.setText("X's Turn - Tap to play");
             }
             img.animate().translationYBy(1000f).setDuration(300);
+            if (counter==9){
+                TextView status = findViewById(R.id.Status);
+                status.setText("Match Draw");
+            }
 
         }
         int flag = 0;
@@ -76,12 +80,14 @@ public class MainActivity extends AppCompatActivity {
                 TextView status = findViewById(R.id.Status);
                 status.setText(winnerStr);
 
+            } else{
+                flag= 0;
             }
         }
-        if (counter == 9 && flag == 0) {
+        if (counter > 9 && flag == 0) {
             TextView status = findViewById(R.id.Status);
             status.setText("Match Draw");
-
+            gameReset(view);
     }
 
     }
