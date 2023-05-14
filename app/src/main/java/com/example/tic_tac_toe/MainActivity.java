@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         status.setText("X's Turn - Tap to play");
     }
 
-        @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
